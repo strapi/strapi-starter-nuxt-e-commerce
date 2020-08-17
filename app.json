@@ -1,0 +1,35 @@
+{
+  "name": "Strapi Starter Nuxt.js E-commerce",
+  "description": "Deploy our Strapi & Nuxt.js E-commerce on Heroku",
+  "keywords": ["strapi", "heroku", "e-commerce", "nuxt.js"],
+  "repository": "https://github.com/strapi/strapi-starter-nuxt-e-commerce",
+  "env": {
+    "PROJECT_PATH": {
+      "description": "Backend project path",
+      "required": true,
+      "value": "backend"
+    },
+    "CLOUDINARY_CLOUD_NAME": {
+      "description": "The 'Cloud name' of your Cloudinary account",
+      "required": true
+    },
+    "CLOUDINARY_API_KEY": {
+      "description": "The 'API Key' of your Cloudinary account",
+      "required": true
+    },
+    "CLOUDINARY_API_SECRET": {
+      "description": "The 'API Secret' of your Cloudinary account",
+      "required": true
+    }
+  },
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "https://github.com/timanovsky/subdir-heroku-buildpack"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

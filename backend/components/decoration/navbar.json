@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_decoration_navbars",
+  "info": {
+    "name": "Navbar",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

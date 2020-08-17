@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-strapi-snipcart",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve",
+    "generate": "nuxt build && nuxt export"
+  },
+  "dependencies": {
+    "@nuxtjs/strapi": "^0.1.3",
+    "core-js": "^2.6.5",
+    "nuxt": "^2.13.0",
+    "vue-meta": "^2.4.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^2.0.0"
+  }
+}
