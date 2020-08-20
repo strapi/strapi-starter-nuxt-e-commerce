@@ -2,7 +2,7 @@
 <div class="flex justify-center bg-gray-200">
   <div class="max-w-screen-lg flex flex-col min-h-screen w-full">
     <NavBar />
-    <Buttons class="" />
+    <Buttons />
     <Nuxt class="flex-grow" />
     <Footer />
   </div>
@@ -16,23 +16,10 @@ import Footer from './../components/Footer'
 import Buttons from './../components/Buttons'
 
 export default {
-  data() {
-    return {
-      homepage: {},
-      error: null
-    }
-  },
   components: {
     NavBar,
     Footer,
     Buttons
-  },
-  async mounted() {
-    try {
-      this.homepage = await this.$strapi.find('homepage')
-    } catch (error) {
-      this.error = error
-    }
   }
 }
 </script>

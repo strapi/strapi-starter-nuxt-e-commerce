@@ -15,7 +15,7 @@ export default {
   },
   async mounted() {
     try {
-      this.products = await this.$strapi.find('products')
+      this.products = await this.$strapi.$products.find()
     } catch (error) {
       this.error = error
     }

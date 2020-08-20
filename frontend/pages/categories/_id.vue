@@ -15,7 +15,7 @@ export default {
   },
   async mounted() {
     try {
-      this.category = await this.$strapi.findOne('categories', this.$route.params.id)
+      this.category = await this.$strapi.$categories.findOne(this.$route.params.id)
     } catch (error) {
       this.error = error
     }

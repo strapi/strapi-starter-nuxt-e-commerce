@@ -40,6 +40,9 @@ To deploy the Nuxt.js blog you'll need:
 
 ![Root directory](/medias/vercel-deploy-step-2.png)  
 
+  - Once your website has been deployed, create a `STORE_URL` env variable in your dashboard containing the url of your deployed frontend
+
+
 ### Automatic build on Vercel
 
 We're using Nuxt.js which is a static site generator (SSG). This means we need to trigger new builds when the content changes in Strapi. We'll use webhooks to do this automatically.
@@ -54,8 +57,7 @@ Now everytime we make a change in Strapi, Vercel creates a new build!
 
 ### Features in Strapi
 
-- 1 Single type
-- 1 Components
+- 1 Component
 - 2 Collection types: Product, Category
 - 27 Created products
 - 6 Created categories
