@@ -74,7 +74,9 @@ Now everytime we make a change in Strapi, Vercel creates a new build!
 ### Payment service
 
 This starter is using [Snipcart](https://snipcart.com/) which allows you setup a shopping cart on any website.
-They wrote a [tutorial](https://snipcart.com/blog/strapi-nuxt-ecommerce-tutorial?utm_source=twitter&utm_medium=facebook&utm_campaign=strapi) teaching you how to create this website but selling cupcakes!
+They wrote a [tutorial](https://snipcart.com/blog/strapi-nuxt-ecommerce-tutorial) teaching you how to create this website but selling cupcakes!
+
+Payment will not work on localhost, we are redirecting you to this [tutorial](https://snipcart.com/blog/develop-a-snipcart-powered-website-locally-using-ngrok) if you want to test payment locally.
 
 ### Getting started
 
