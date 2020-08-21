@@ -31,8 +31,9 @@ To deploy the Nuxt.js blog you'll need:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fstrapi%2Fstrapi-starter-nuxt-e-commerce&env=API_URL&envDescription=Enter%20the%20url%20of%20your%20Strapi%20API%20without%20the%20trailing%20slash&project-name=my-strapi-starter-nuxt-e-commerce)  
 
-  - Select the repository you want to deploy, here it's the strapi-starter-nuxt-e-commerce
+  - Select the repository you want to deploy, here it's the `strapi-starter-nuxt-e-commerce`
   - Select the root directory of your frontend
+  - Override the Build commande to `yarn generate`
 
 ![Root directory](/medias/vercel-deploy-step-1.png)
 
