@@ -1,5 +1,5 @@
 <template>
-  <Products :products="this.category.products" :error="error" :storeUrl="storeUrl" />
+  <Products :products="this.category.products" :error="error" />
 </template>
 
 <script>
@@ -9,7 +9,6 @@ export default {
   data() {
     return {
       category: {},
-      storeUrl: process.env.storeUrl,
       error: null
     }
   },

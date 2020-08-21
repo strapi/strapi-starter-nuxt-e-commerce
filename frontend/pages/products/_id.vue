@@ -2,7 +2,7 @@
 <div v-if="this.product !== null">
   <div class="m-6 mt-56 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mt-8">
     <div class="rounded-t-lg pt-2 pb-2">
-      <img :src="`${storeUrl}${product.image.formats.thumbnail.url}`" class="m-auto">
+      <img :src="`${getStrapiMedia(product.image.formats.thumbnail.url)}`" class="m-auto">
     </div>
     <div class="w-full p-5 flex flex-col justify-between">
       <div>
@@ -11,7 +11,7 @@
       </div>
 
       <button v-if="product.status === 'published'" class="snipcart-add-item mt-4 bg-white border border-gray-200 d hover:shadow-lg text-gray-700 font-semibold py-2 px-4 rounded shadow" :data-item-id="product.id" :data-item-price="product.price"
-        :data-item-url="`${storeUrl}${this.$route.fullPath}`" :data-item-description="product.description" :data-item-image="`${storeUrl}${product.image.formats.thumbnail.url}`" :data-item-name="product.title" v-bind="customFields">
+        :data-item-url="`${this.$route.fullPath}`" :data-item-description="product.description" :data-item-image="`${getStrapiMedia(product.image.formats.thumbnail.url)}`" :data-item-name="product.title" v-bind="customFields">
         Add to cart
       </button>
 
@@ -32,11 +32,14 @@
 </template>
 
 <script>
+import {
+  getStrapiMedia
+} from '~/utils/medias'
+
 export default {
   data() {
     return {
       product: null,
-      storeUrl: process.env.storeUrl,
       error: null
     }
   },
@@ -69,6 +72,9 @@ export default {
           ...curr
         }))
     }
+  },
+  methods: {
+    getStrapiMedia
   }
 }
 </script>
