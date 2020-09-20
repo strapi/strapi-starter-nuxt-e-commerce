@@ -79,14 +79,14 @@ export default {
    */
   modules: ['@nuxtjs/strapi'],
   strapi: {
-    url: process.env.API_URL || "http://localhost:1337",
+    url: process.env.API_URL || "https://my-strapi-projects.herokuapp.com/",
     entities: [
       'products',
       'categories'
     ],
   },
   env: {
-    storeUrl: process.env.STORE_URL || "http://localhost:1337"
+    storeUrl: process.env.STORE_URL || "https://my-strapi-projects.herokuapp.com/"
   },
   /*
    ** Build configuration
