@@ -32,30 +32,21 @@ First, you'll need to create your own copy of this starter. You can do so by cli
 
 ### Backend
 
-Make sure you're in the `backend` directory:
+Create a Strapi project named `backend` using the [e-commerce template](https://github.com/strapi/strapi-template-ecommerce):
 
-```bash
-cd backend
+```
+# Using Yarn
+yarn create strapi-app backend --template https://github.com/strapi/strapi-template-ecommerce
+
+# Or using NPM
+npx create-strapi-app backend --template https://github.com/strapi/strapi-template-ecommerce
 ```
 
-
-Install dependencies and run your server:
-
-```bash
-# Using yarn
-yarn install
-yarn develop
-
-# Using npm
-npm install
-npm run develop
-```
-
-The first time you start your project, sample seed data will be imported.
+The Strapi server will automatically start and import sample seed data.
 
 ### Frontend
 
-Make sure you're in the `frontend` directory:
+Leave the Strapi backend running in the background. Open another terminal tab, and make sure you're in the `frontend` directory:
 
 ```bash
 cd frontend
