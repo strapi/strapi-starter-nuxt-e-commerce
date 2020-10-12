@@ -1,10 +1,5 @@
 export default {
   /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  ssr: true,
-  /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
