@@ -24,46 +24,36 @@ This starter is using [Snipcart](https://snipcart.com/) which allows you setup a
 
 Payment will not work on localhost, we are redirecting you to this [tutorial](https://snipcart.com/blog/develop-a-snipcart-powered-website-locally-using-ngrok) if you want to test payment locally.
 
+
 ## Getting started
 
-The easiest way to try this starter is to run it locally on your computer.
+Use our `create-strapi-starter` CLI to create your project.
 
-First, you'll need to create your own copy of this starter. You can do so by clicking [the "Use this template" button](https://github.com/strapi/strapi-starter-nuxt-e-commerce/generate) on GitHub, and filling the [form](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
-
-### Backend
-
-Create a Strapi project named `backend` using the [e-commerce template](https://github.com/strapi/strapi-template-ecommerce):
-
-```
+```sh
 # Using Yarn
-yarn create strapi-app backend --template https://github.com/strapi/strapi-template-ecommerce
+yarn create strapi-starter my-site nuxt-e-commerce
 
 # Or using NPM
-npx create-strapi-app backend --template https://github.com/strapi/strapi-template-ecommerce
+npx create-strapi-starter my-site nuxt-e-commerce
 ```
 
-The Strapi server will automatically start and import sample seed data.
+The CLI will create a monorepo, install dependencies, and run your project automatically.
 
-### Frontend
+The Nuxt frontend server will run here => [http://localhost:3000](http://localhost:3000)
 
-Leave the Strapi backend running in the background. Open another terminal tab, and make sure you're in the `frontend` directory:
+The Strapi backend server will run here => [http://localhost:1337](http://localhost:1337)
 
-```bash
-cd frontend
-```
+## Deploying to production
 
-Then install dependencies and start the server:
+You will need to deploy the `frontend` and `backend` projects separately. Here are the docs to deploy each one:
 
-```bash
-# Using yarn
-yarn install
-yarn develop
+- [Deploy Strapi](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment.html#hosting-provider-guides)
+- [Deploy Nuxt](https://nuxtjs.org/docs/2.x/deployment/deploying-to-21yunbox)
 
-# Using npm
-npm install
-npm run develop
-```
+Don't forget to setup the environment variables on your production app:
 
-The Nuxt.js server will run here => [http://localhost:3000](http://localhost:3000)
+For the frontend the following environment variable is required: 
+- `API_URL`: URL of your Strapi backend, without trailing slash
+
 
 Enjoy this starter!
