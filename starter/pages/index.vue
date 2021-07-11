@@ -1,27 +1,33 @@
 <template>
-<Products :products="products" :error="error" :storeUrl="storeUrl" />
+  <Products
+    :pending="$fetchState.pending"
+    :error="$fetchState.error"
+    :products="products"
+    :storeUrl="storeUrl"
+  />
 </template>
 
 <script>
-import Products from "~/components/Products.vue"
+import Products from "~/components/Products.vue";
 
 export default {
   data() {
     return {
       products: [],
       storeUrl: process.env.storeUrl,
-      error: null
-    }
+      error: null,
+    };
   },
-  async mounted() {
+  async fetch() {
     try {
-      this.products = await this.$strapi.$products.find()
+      this.products = await this.$strapi.$products.find();
     } catch (error) {
-      this.error = error
+      this.error = error;
     }
   },
+  fetchOnServer: false,
   components: {
-    Products
-  }
-}
+    Products,
+  },
+};
 </script>
